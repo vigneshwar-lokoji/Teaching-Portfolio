@@ -902,7 +902,7 @@
   }
 
   // LinkedIn link — set your profile URL here once and it updates everywhere.
-  var LINKEDIN_URL = ""; // e.g. "https://www.linkedin.com/in/vigneshwar-lokoji"
+  var LINKEDIN_URL = "https://www.linkedin.com/in/vigneshwar-lokoji"; // live profile
   document.querySelectorAll('[data-linkedin]').forEach(function (a) {
     if (LINKEDIN_URL) { a.href = LINKEDIN_URL; a.target = "_blank"; a.rel = "noopener"; }
     else { a.style.display = "none"; } // hidden until a real profile URL is set
