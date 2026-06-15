@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vigneshwar Lokoji — High School Mathematics Teacher</title>
+<meta name="description" content="Portfolio of Vigneshwar Lokoji, High School Mathematics Teacher. Texas Mathematics 7-12 certification (ACP, in progress). Pre-Calculus, Calculus, Statistics, and AP instruction with a data-informed, student-first approach." />
+<meta name="author" content="Vigneshwar Lokoji" />
+<meta property="og:title" content="Vigneshwar Lokoji — High School Mathematics Teacher" />
+<meta property="og:description" content="Data-informed, student-first mathematics teacher. 4.3/5 student rating, 100% AP top-score rate, 37% retention gain." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --navy: #0f2540;
+    --navy-deep: #0a1a2e;
+    --navy-soft: #1b3a5c;
+    --gold: #c8a24b;
+    --gold-soft: #e3c87f;
+    --ink: #1f2a37;
+    --slate: #51607a;
+    --slate-light: #6b7891;
+    --line: #e3e8ef;
+    --bg: #f6f8fb;
+    --card: #ffffff;
+    --cream: #faf7f0;
+    --shadow-sm: 0 1px 3px rgba(15,37,64,.06), 0 1px 2px rgba(15,37,64,.04);
+    --shadow-md: 0 10px 30px rgba(15,37,64,.08), 0 4px 10px rgba(15,37,64,.05);
+    --shadow-lg: 0 24px 60px rgba(15,37,64,.14);
+    --radius: 16px;
+    --radius-sm: 10px;
+    --maxw: 1120px;
+    --serif: 'Lora', Georgia, 'Times New Roman', serif;
+    --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 { font-family: var(--serif); line-height: 1.18; color: var(--navy); font-weight: 600; }
+
+  a { color: inherit; text-decoration: none; }
+
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+
+  .eyebrow {
+    font-family: var(--sans);
+    text-transform: uppercase;
+    letter-spacing: .18em;
+    font-size: .74rem;
+    font-weight: 700;
+    color: var(--gold);
+  }
+
+  /* ============ NAV ============ */
+  header.nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(246,248,251,.82);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 70px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-family: var(--serif); font-weight: 700; color: var(--navy); font-size: 1.05rem; }
+  .brand .mark {
+    width: 38px; height: 38px; border-radius: 9px;
+    background: linear-gradient(145deg, var(--navy), var(--navy-soft));
+    color: var(--gold-soft); display: grid; place-items: center;
+    font-size: .85rem; letter-spacing: .04em; border: 1px solid rgba(200,162,75,.35);
+  }
+  .nav-links { display: flex; align-items: center; gap: 6px; }
+  .nav-links a {
+    font-size: .92rem; font-weight: 500; color: var(--slate);
+    padding: 8px 14px; border-radius: 8px; transition: all .18s ease;
+  }
+  .nav-links a:hover { color: var(--navy); background: rgba(15,37,64,.05); }
+  .nav-links a.cta {
+    background: var(--navy); color: #fff; font-weight: 600;
+    box-shadow: var(--shadow-sm);
+  }
+  .nav-links a.cta:hover { background: var(--navy-deep); color: #fff; }
+  .nav-toggle { display: none; background: none; border: 1px solid var(--line); border-radius: 8px; width: 42px; height: 40px; cursor: pointer; }
+  .nav-toggle span { display: block; width: 18px; height: 2px; background: var(--navy); margin: 3px auto; border-radius: 2px; }
+
+  /* ============ HERO ============ */
+  .hero { position: relative; padding: 64px 0 72px; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: .5; }
+  .hero-grid {
+    position: absolute; inset: 0;
+    background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: radial-gradient(ellipse 80% 60% at 70% 20%, #000 0%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 70% 20%, #000 0%, transparent 75%);
+    opacity: .6;
+  }
+  .math-symbol { position: absolute; font-family: var(--serif); color: var(--navy); opacity: .05; font-weight: 700; user-select: none; }
+
+  .hero-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1.15fr .85fr; gap: 56px; align-items: center; }
+  .hero-copy .eyebrow { display: inline-block; margin-bottom: 18px; }
+  .hero h1 { font-size: clamp(2.4rem, 5vw, 3.5rem); font-weight: 700; letter-spacing: -.01em; }
+  .hero h1 .accent { color: var(--navy); position: relative; }
+  .hero .role { font-family: var(--serif); font-size: clamp(1.15rem, 2.4vw, 1.5rem); color: var(--gold); font-weight: 600; margin-top: 6px; }
+  .hero .lead { font-size: 1.08rem; color: var(--slate); margin-top: 20px; max-width: 30em; }
+  .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 9px;
+    padding: 12px 22px; border-radius: 10px; font-weight: 600; font-size: .95rem;
+    transition: all .2s ease; cursor: pointer; border: 1px solid transparent;
+  }
+  .btn svg { width: 17px; height: 17px; }
+  .btn-primary { background: var(--navy); color: #fff; box-shadow: var(--shadow-md); }
+  .btn-primary:hover { background: var(--navy-deep); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+  .btn-ghost { background: #fff; color: var(--navy); border-color: var(--line); box-shadow: var(--shadow-sm); }
+  .btn-ghost:hover { border-color: var(--gold); transform: translateY(-2px); }
+
+  .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
+  .tag {
+    font-size: .82rem; font-weight: 600; color: var(--navy-soft);
+    background: rgba(27,58,92,.07); border: 1px solid rgba(27,58,92,.12);
+    padding: 6px 13px; border-radius: 99px;
+  }
+
+  /* Hero card */
+  .hero-card {
+    position: relative; background: linear-gradient(160deg, var(--navy), var(--navy-deep));
+    color: #eaf0f7; border-radius: 22px; padding: 36px 32px; box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(200,162,75,.2); overflow: hidden;
+  }
+  .hero-card::before {
+    content: ""; position: absolute; top: -40%; right: -30%; width: 80%; height: 80%;
+    background: radial-gradient(circle, rgba(200,162,75,.18), transparent 65%);
+  }
+  .hc-photo {
+    width: 116px; height: 116px; border-radius: 50%; margin: 0 auto 18px;
+    object-fit: cover; object-position: 50% 28%;
+    border: 3px solid var(--gold);
+    box-shadow: 0 8px 24px rgba(0,0,0,.35); position: relative; z-index: 1; display: block;
+    background: var(--navy-deep);
+  }
+  .hero-card .hc-name { text-align: center; font-family: var(--serif); font-size: 1.3rem; color: #fff; font-weight: 700; position: relative; z-index: 1; }
+  .hero-card .hc-sub { text-align: center; color: var(--gold-soft); font-size: .9rem; font-weight: 600; margin-top: 3px; position: relative; z-index: 1; }
+  .cert-badge {
+    margin: 22px 0 0; padding: 16px; border-radius: 12px;
+    background: rgba(255,255,255,.06); border: 1px solid rgba(200,162,75,.25);
+    position: relative; z-index: 1;
+  }
+  .cert-badge .cb-label { font-size: .68rem; text-transform: uppercase; letter-spacing: .14em; color: var(--gold); font-weight: 700; }
+  .cert-badge .cb-title { font-family: var(--serif); font-size: 1rem; color: #fff; margin-top: 5px; font-weight: 600; }
+  .cert-badge .cb-status { display: inline-flex; align-items: center; gap: 6px; margin-top: 9px; font-size: .8rem; color: #cdd9e8; }
+  .cert-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 3px rgba(200,162,75,.25); animation: pulse 2.4s infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .45; } }
+  .hc-contact { display: flex; flex-direction: column; gap: 8px; margin-top: 20px; position: relative; z-index: 1; }
+  .hc-contact a { display: flex; align-items: center; gap: 10px; font-size: .88rem; color: #d4deea; padding: 7px 0; transition: color .15s; }
+  .hc-contact a:hover { color: var(--gold-soft); }
+  .hc-contact svg { width: 16px; height: 16px; flex: none; color: var(--gold); }
+
+  /* ============ STAT BAND ============ */
+  .stats { background: var(--navy); color: #fff; padding: 0; }
+  .stats-inner { display: grid; grid-template-columns: repeat(4, 1fr); }
+  .stat { text-align: center; padding: 36px 20px; border-right: 1px solid rgba(255,255,255,.1); }
+  .stat:last-child { border-right: none; }
+  .stat .num { font-family: var(--serif); font-size: 2.5rem; font-weight: 700; color: var(--gold-soft); line-height: 1; }
+  .stat .label { font-size: .86rem; color: #b9c6d8; margin-top: 10px; font-weight: 500; }
+
+  /* ============ SECTIONS ============ */
+  section.block { padding: 84px 0; }
+  .section-head { max-width: 640px; margin-bottom: 44px; }
+  .section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+  .section-head .eyebrow { display: block; margin-bottom: 12px; }
+  .section-head h2 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); font-weight: 700; }
+  .section-head p { color: var(--slate); margin-top: 14px; font-size: 1.05rem; }
+
+  .alt { background: linear-gradient(180deg, #fff, var(--bg)); }
+
+  /* About */
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .philosophy p { color: var(--slate); font-size: 1.05rem; margin-bottom: 16px; }
+  .philosophy p strong { color: var(--navy); }
+  .pillars { display: flex; flex-direction: column; gap: 16px; }
+  .pillar { display: flex; gap: 16px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 20px 22px; box-shadow: var(--shadow-sm); }
+  .pillar .picon { flex: none; width: 44px; height: 44px; border-radius: 10px; background: var(--cream); border: 1px solid var(--line); display: grid; place-items: center; color: var(--navy); }
+  .pillar .picon svg { width: 22px; height: 22px; }
+  .pillar h4 { font-size: 1.05rem; margin-bottom: 4px; }
+  .pillar p { font-size: .92rem; color: var(--slate); }
+
+  /* Subjects */
+  .subjects { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 16px; }
+  .subject {
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-sm);
+    padding: 20px; box-shadow: var(--shadow-sm); transition: all .2s ease;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .subject:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: rgba(200,162,75,.5); }
+  .subject .sicon { flex: none; width: 40px; height: 40px; border-radius: 9px; background: var(--navy); color: var(--gold-soft); display: grid; place-items: center; font-family: var(--serif); font-weight: 700; font-size: 1.1rem; }
+  .subject .stitle { font-weight: 600; color: var(--navy); font-size: .98rem; }
+  .subject .ssub { font-size: .78rem; color: var(--slate-light); }
+
+  /* Experience timeline */
+  .timeline { position: relative; }
+  .timeline::before { content: ""; position: absolute; left: 26px; top: 8px; bottom: 8px; width: 2px; background: linear-gradient(180deg, var(--gold), var(--line)); }
+  .tl-item { position: relative; padding-left: 76px; margin-bottom: 36px; }
+  .tl-item:last-child { margin-bottom: 0; }
+  .tl-dot {
+    position: absolute; left: 14px; top: 4px; width: 26px; height: 26px; border-radius: 50%;
+    background: #fff; border: 3px solid var(--gold); display: grid; place-items: center; z-index: 1;
+  }
+  .tl-dot::after { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--navy); }
+  .tl-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px 28px; box-shadow: var(--shadow-sm); transition: box-shadow .2s; }
+  .tl-card:hover { box-shadow: var(--shadow-md); }
+  .tl-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 4px; }
+  .tl-role { font-family: var(--serif); font-size: 1.2rem; font-weight: 600; color: var(--navy); }
+  .tl-date { font-size: .82rem; font-weight: 600; color: var(--gold); background: rgba(200,162,75,.1); padding: 4px 12px; border-radius: 99px; white-space: nowrap; }
+  .tl-org { font-weight: 600; color: var(--slate); font-size: .96rem; margin-bottom: 14px; }
+  .tl-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .tl-list li { position: relative; padding-left: 24px; color: var(--slate); font-size: .95rem; }
+  .tl-list li::before { content: ""; position: absolute; left: 4px; top: 9px; width: 7px; height: 7px; border-radius: 2px; background: var(--gold); transform: rotate(45deg); }
+  .tl-list li strong { color: var(--navy); font-weight: 600; }
+
+  /* Achievements */
+  .ach-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+  .ach {
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 28px 26px; box-shadow: var(--shadow-sm); position: relative; overflow: hidden;
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .ach:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .ach::before { content: ""; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--gold); }
+  .ach .anum { font-family: var(--serif); font-size: 2.3rem; font-weight: 700; color: var(--navy); line-height: 1; }
+  .ach .alabel { font-weight: 600; color: var(--navy); margin-top: 10px; font-size: 1rem; }
+  .ach .adesc { color: var(--slate); font-size: .88rem; margin-top: 5px; }
+
+  /* Testimonials */
+  .quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .quote {
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 28px 26px 24px; box-shadow: var(--shadow-sm); position: relative;
+  }
+  .quote .qmark { font-family: var(--serif); font-size: 3.4rem; color: var(--gold); line-height: .6; opacity: .35; }
+  .quote blockquote { color: var(--ink); font-size: 1rem; line-height: 1.65; margin: 6px 0 18px; font-style: italic; }
+  .quote .qby { display: flex; align-items: center; gap: 12px; }
+  .quote .qav { width: 40px; height: 40px; border-radius: 50%; background: var(--navy); color: var(--gold-soft); display: grid; place-items: center; font-family: var(--serif); font-weight: 700; font-size: .95rem; flex: none; }
+  .quote .qname { font-weight: 600; color: var(--navy); font-size: .92rem; }
+  .quote .qrole { font-size: .8rem; color: var(--slate-light); }
+  .placeholder-note {
+    grid-column: 1 / -1; text-align: center; font-size: .9rem; color: var(--slate-light);
+    background: var(--cream); border: 1px dashed var(--gold); border-radius: var(--radius-sm); padding: 14px;
+  }
+
+  /* Innovation cards */
+  .innov { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .icard { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow-sm); transition: all .2s; }
+  .icard:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .icard .ibadge { width: 46px; height: 46px; border-radius: 11px; background: var(--cream); border: 1px solid var(--line); display: grid; place-items: center; color: var(--navy); margin-bottom: 16px; }
+  .icard .ibadge svg { width: 24px; height: 24px; }
+  .icard h4 { font-size: 1.15rem; margin-bottom: 8px; }
+  .icard p { color: var(--slate); font-size: .94rem; }
+  .icard .imeta { margin-top: 14px; font-size: .8rem; font-weight: 600; color: var(--gold); text-transform: uppercase; letter-spacing: .08em; }
+
+  /* Research & Scholarship */
+  .research-featured { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-bottom: 30px; }
+  .rcard {
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 30px 30px 26px; box-shadow: var(--shadow-sm); position: relative;
+    transition: transform .2s ease, box-shadow .2s ease; display: flex; flex-direction: column;
+  }
+  .rcard:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .rcard.flag { border-top: 3px solid var(--gold); }
+  .rcard .rtype { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; color: var(--gold); }
+  .rcard .rtitle { font-family: var(--serif); font-size: 1.22rem; font-weight: 600; color: var(--navy); margin: 10px 0 6px; line-height: 1.3; }
+  .rcard .rvenue { font-size: .86rem; color: var(--slate-light); font-style: italic; margin-bottom: 14px; }
+  .rcard .rdesc { color: var(--slate); font-size: .94rem; margin-bottom: 16px; }
+  .rcard .rtags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: auto; }
+  .rcard .rtag { font-size: .76rem; font-weight: 600; color: var(--navy-soft); background: rgba(27,58,92,.07); border: 1px solid rgba(27,58,92,.12); padding: 4px 11px; border-radius: 99px; }
+  .rcard .redu { margin-top: auto; padding: 13px 16px; background: var(--cream); border-left: 3px solid var(--gold); border-radius: 0 8px 8px 0; font-size: .86rem; color: var(--slate); }
+  .rcard .redu strong { color: var(--navy); }
+  .rpub-list { display: flex; flex-direction: column; }
+  .rpub { display: flex; gap: 18px; padding: 22px 6px; border-top: 1px solid var(--line); align-items: baseline; transition: background .15s; }
+  .rpub:last-child { border-bottom: 1px solid var(--line); }
+  .rpub:hover { background: rgba(15,37,64,.015); }
+  .rpub .rp-num { font-family: var(--serif); font-size: 1.05rem; font-weight: 700; color: var(--gold); flex: none; width: 26px; }
+  .rpub .rp-body { flex: 1; }
+  .rpub .rp-title { font-family: var(--serif); font-weight: 600; color: var(--navy); font-size: 1.05rem; line-height: 1.35; }
+  .rpub .rp-meta { color: var(--slate-light); font-size: .86rem; margin-top: 5px; }
+  .rpub .rp-result { color: var(--slate); font-size: .9rem; margin-top: 7px; }
+  .rpub .rp-result strong { color: var(--navy); font-weight: 600; }
+
+  /* Credentials */
+  .creds { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .cred-block h3 { font-size: 1.3rem; margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
+  .cred-block h3 svg { width: 22px; height: 22px; color: var(--gold); }
+  .cred-item { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 18px 20px; box-shadow: var(--shadow-sm); margin-bottom: 12px; }
+  .cred-item .ct { font-family: var(--serif); font-weight: 600; color: var(--navy); font-size: 1.02rem; }
+  .cred-item .cm { color: var(--slate); font-size: .9rem; margin-top: 3px; }
+  .cred-item .cg { font-size: .82rem; color: var(--gold); font-weight: 600; margin-top: 4px; }
+  .cert-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .cert-list li { display: flex; align-items: flex-start; gap: 11px; color: var(--slate); font-size: .95rem; }
+  .cert-list li svg { width: 18px; height: 18px; color: var(--gold); flex: none; margin-top: 3px; }
+  .cert-list li strong { color: var(--navy); font-weight: 600; }
+
+  /* Competencies */
+  .comp-head { text-align: center; margin-top: 56px; }
+  .comp-head .eyebrow { display: block; margin-bottom: 8px; }
+  .comp-head h3 { font-size: clamp(1.4rem, 2.6vw, 1.7rem); }
+  .competencies { margin-top: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 26px; }
+  .comp-group { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px 24px 26px; box-shadow: var(--shadow-sm); }
+  .comp-group h4 { font-size: 1.02rem; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+  .comp-group h4::before { content: ""; width: 20px; height: 2px; background: var(--gold); flex: none; }
+  .comp-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .comp-tags span { font-size: .82rem; font-weight: 500; color: var(--slate); background: var(--bg); border: 1px solid var(--line); padding: 6px 12px; border-radius: 8px; }
+
+  /* ============ CONTACT ============ */
+  .contact { background: linear-gradient(160deg, var(--navy), var(--navy-deep)); color: #fff; padding: 80px 0; position: relative; overflow: hidden; }
+  .contact::before { content: ""; position: absolute; top: -30%; left: -10%; width: 50%; height: 100%; background: radial-gradient(circle, rgba(200,162,75,.14), transparent 60%); }
+  .contact-inner { position: relative; z-index: 1; text-align: center; max-width: 680px; margin: 0 auto; }
+  .contact .eyebrow { display: inline-block; margin-bottom: 14px; }
+  .contact h2 { color: #fff; font-size: clamp(1.9rem, 4vw, 2.6rem); }
+  .contact p { color: #c2cedd; font-size: 1.08rem; margin-top: 14px; }
+  .contact-actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 32px; }
+  .btn-gold { background: var(--gold); color: var(--navy-deep); box-shadow: 0 10px 30px rgba(200,162,75,.3); }
+  .btn-gold:hover { background: var(--gold-soft); transform: translateY(-2px); }
+  .btn-outline { background: transparent; color: #fff; border-color: rgba(255,255,255,.3); }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold-soft); transform: translateY(-2px); }
+  .contact-info { display: flex; flex-wrap: wrap; justify-content: center; gap: 28px; margin-top: 36px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,.12); }
+  .contact-info a { display: flex; align-items: center; gap: 9px; color: #d4deea; font-size: .95rem; }
+  .contact-info a:hover { color: var(--gold-soft); }
+  .contact-info svg { width: 17px; height: 17px; color: var(--gold); }
+
+  footer.foot { background: var(--navy-deep); color: #8499b3; text-align: center; padding: 26px 0; font-size: .85rem; }
+  footer.foot strong { color: #c7d4e3; font-family: var(--serif); }
+
+  /* Reveal animation */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 920px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+    .hero-card { max-width: 420px; }
+    .about-grid, .creds, .research-featured { grid-template-columns: 1fr; gap: 32px; }
+    .stats-inner { grid-template-columns: repeat(2, 1fr); }
+    .stat:nth-child(2) { border-right: none; }
+    .stat { border-bottom: 1px solid rgba(255,255,255,.1); }
+  }
+  @media (max-width: 960px) {
+    .nav-toggle { display: block; }
+    .nav-links { position: fixed; inset: 70px 0 auto 0; flex-direction: column; align-items: stretch; background: rgba(246,248,251,.98); backdrop-filter: blur(12px); padding: 14px 18px; gap: 4px; border-bottom: 1px solid var(--line); transform: translateY(-150%); transition: transform .3s ease; box-shadow: var(--shadow-md); }
+    .nav-links.open { transform: translateY(0); }
+    .nav-links a { padding: 12px 14px; }
+  }
+  @media (max-width: 680px) {
+    .wrap { padding: 0 18px; }
+    section.block { padding: 60px 0; }
+    .tl-item { padding-left: 60px; }
+    .timeline::before { left: 18px; }
+    .tl-dot { left: 6px; }
+  }
+
+  @media print {
+    header.nav, .hero-cta, .nav-toggle, .contact-actions, .placeholder-note { display: none !important; }
+    body { background: #fff; }
+    .hero, section.block, .stats, .contact { padding: 18px 0; page-break-inside: avoid; }
+    .reveal { opacity: 1 !important; transform: none !important; }
+    a { color: var(--navy); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+    .reveal { opacity: 1; transform: none; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand"><span class="mark">VL</span> Vigneshwar Lokoji</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#subjects">Subjects</a>
+      <a href="#experience">Experience</a>
+      <a href="#results">Results</a>
+      <a href="#voices">Voices</a>
+      <a href="#research">Research</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#contact" class="cta">Connect</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-bg">
+    <div class="hero-grid"></div>
+    <span class="math-symbol" style="top:12%; left:6%; font-size:5rem;">&#8721;</span>
+    <span class="math-symbol" style="top:30%; left:46%; font-size:3.5rem;">&#960;</span>
+    <span class="math-symbol" style="bottom:14%; left:10%; font-size:4.5rem;">&#8747;</span>
+    <span class="math-symbol" style="top:8%; right:8%; font-size:3rem;">&#8730;</span>
+    <span class="math-symbol" style="bottom:24%; left:38%; font-size:2.6rem;">&#952;</span>
+  </div>
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow">Texas Mathematics 7&ndash;12 &middot; Certifying Educator</span>
+      <h1><span class="accent">Vigneshwar Lokoji</span></h1>
+      <div class="role">High School Mathematics Teacher</div>
+      <p class="lead">I turn abstract mathematics into something every student can reason through &mdash; pairing a data-informed classroom with genuine care for how each learner thinks. Six-plus years guiding students from high school AP through the graduate level.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          Let's Connect
+        </a>
+        <a href="Vigneshwar-Lokoji-Teaching-Resume.pdf" download class="btn btn-ghost">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          Download R&eacute;sum&eacute;
+        </a>
+        <a href="#experience" class="btn btn-ghost">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          View Experience
+        </a>
+      </div>
+      <div class="hero-tags">
+        <span class="tag">Algebra &amp; Geometry</span>
+        <span class="tag">Pre-Calculus</span>
+        <span class="tag">AP Calculus</span>
+        <span class="tag">Statistics</span>
+        <span class="tag">Data-Informed Teaching</span>
+      </div>
+    </div>
+
+    <aside class="hero-card">
+      <img class="hc-photo" src="headshot.jpg" alt="Vigneshwar Lokoji, mathematics educator" width="116" height="116" />
+      <div class="hc-name">Vigneshwar Lokoji</div>
+      <div class="hc-sub">Mathematics Educator</div>
+      <div class="cert-badge">
+        <div class="cb-label">Texas Secondary Math &middot; Grades 7&ndash;12</div>
+        <div class="cb-title">Cleared to Teach on an Intern Certificate</div>
+        <div class="cb-status"><span class="dot"></span> TX PACT 735 passed &middot; available upon hire</div>
+      </div>
+      <div class="hc-contact">
+        <a href="mailto:lokojivigneshwar@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+          lokojivigneshwar@gmail.com
+        </a>
+        <a href="tel:+13616961211">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +1 361-696-1211
+        </a>
+        <a href="#" data-linkedin>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 17V10.3H6.13V17h2.21zM7.23 9.4a1.28 1.28 0 1 0 0-2.56 1.28 1.28 0 0 0 0 2.56zM18 17v-3.67c0-1.96-.42-3.47-2.71-3.47-1.1 0-1.84.6-2.14 1.18h-.03V10.3H10.9V17h2.21v-3.32c0-.88.17-1.73 1.26-1.73 1.07 0 1.09 1 1.09 1.79V17H18z"/></svg>
+          Connect on LinkedIn
+        </a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats">
+  <div class="wrap stats-inner">
+    <div class="stat"><div class="num">4.3<span style="font-size:1.2rem;color:#9fb0c6;">/5</span></div><div class="label">Student satisfaction rating</div></div>
+    <div class="stat"><div class="num">100%</div><div class="label">AP top-score success (8 of 8)</div></div>
+    <div class="stat"><div class="num">37%</div><div class="label">Course retention improvement</div></div>
+    <div class="stat"><div class="num">6+</div><div class="label">Years teaching &amp; tutoring</div></div>
+  </div>
+</section>
+
+<!-- ============ ABOUT / PHILOSOPHY ============ -->
+<section class="block" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="philosophy reveal">
+        <span class="eyebrow">Teaching Philosophy</span>
+        <h2 style="font-size:clamp(1.8rem,3.5vw,2.4rem);margin:12px 0 20px;">Mathematics is a way of thinking &mdash; not a list of steps to memorize.</h2>
+        <p>My classroom rests on three commitments: <strong>meet every student where they are</strong>, build intuition before formal notation, and use frequent low-stakes checks to catch misconceptions before they harden.</p>
+        <p>As a graduate SI leader and teaching assistant, I built a daily quiz-and-feedback loop that surfaced <strong>exactly where students were struggling</strong>, then adjusted instruction in real time. That approach lifted course retention by 37% and cut drop-offs to just 2%.</p>
+        <p>Having applied mathematics and analytics to real enterprise problems at <strong>TCS and First American</strong>, I can finally answer the question every student asks &mdash; <em>&ldquo;when will I ever use this?&rdquo;</em> &mdash; with stories from the field.</p>
+      </div>
+      <div class="pillars reveal">
+        <div class="pillar">
+          <span class="picon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span>
+          <div><h4>Foundations First</h4><p>Every advanced concept is anchored to the fundamentals students already own, so nothing feels like magic.</p></div>
+        </div>
+        <div class="pillar">
+          <span class="picon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 17V9M13 17V5M8 17v-3"/></svg></span>
+          <div><h4>Data-Informed Instruction</h4><p>Quick daily checks tell me who needs what tomorrow &mdash; I teach the room in front of me, not a script.</p></div>
+        </div>
+        <div class="pillar">
+          <span class="picon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+          <div><h4>Student-First Mentorship</h4><p>High expectations paired with real support. Office hours, patience, and a 100% AP top-score cohort to show for it.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SUBJECTS ============ -->
+<section class="block alt" id="subjects">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Grades 7&ndash;12 &amp; Beyond</span>
+      <h2>Subjects I Teach</h2>
+      <p>Certified-track for Texas Mathematics 7&ndash;12, with hands-on instruction spanning the full secondary and early-college curriculum.</p>
+    </div>
+    <div class="subjects reveal">
+      <div class="subject"><span class="sicon">x</span><div><div class="stitle">Algebra I &amp; II</div><div class="ssub">Foundational &amp; advanced</div></div></div>
+      <div class="subject"><span class="sicon">&#9651;</span><div><div class="stitle">Geometry</div><div class="ssub">Proof &amp; spatial reasoning</div></div></div>
+      <div class="subject"><span class="sicon">&#8736;</span><div><div class="stitle">Trigonometry</div><div class="ssub">Functions &amp; identities</div></div></div>
+      <div class="subject"><span class="sicon">f</span><div><div class="stitle">Pre-Calculus</div><div class="ssub">SI Leader &middot; 4.3/5 rating</div></div></div>
+      <div class="subject"><span class="sicon">&#8747;</span><div><div class="stitle">AP Calculus AB/BC</div><div class="ssub">Calculus I &amp; II taught</div></div></div>
+      <div class="subject"><span class="sicon">&#963;</span><div><div class="stitle">Statistics &amp; AP Stats</div><div class="ssub">JMP, Jamovi, applied data</div></div></div>
+      <div class="subject"><span class="sicon">&#37;</span><div><div class="stitle">Business &amp; Quant Math</div><div class="ssub">Applied &amp; financial reasoning</div></div></div>
+      <div class="subject"><span class="sicon">&#8505;</span><div><div class="stitle">College &amp; AP Readiness</div><div class="ssub">Test prep &amp; transitions</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="block" id="experience">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Classroom &amp; Tutoring</span>
+      <h2>Teaching Experience</h2>
+      <p>From university lecture halls to one-on-one AP coaching, a track record of measurable student success across every level.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-top">
+            <div class="tl-role">Graduate Teaching Assistant &amp; Supplemental Instruction Leader</div>
+            <span class="tl-date">Aug 2024 &ndash; May 2026</span>
+          </div>
+          <div class="tl-org">Texas A&amp;M University &ndash; Corpus Christi</div>
+          <ul class="tl-list">
+            <li><strong>Led Supplemental Instruction (SI) sessions for Pre-Calculus</strong> &mdash; review lectures, conceptual breakdowns, and office hours &mdash; earning a <strong>4.3/5 student rating</strong> while managing pace, structure, and classroom behavior for full sections.</li>
+            <li><strong>Collaborated with course faculty as a team player</strong> &mdash; joining planning and department meetings, aligning sessions to their lesson plans, and co-reviewing coursework and common student errors.</li>
+            <li>Diagnosed misconceptions with <strong>formative checks</strong>, then re-taught with worked examples, visuals, and step-by-step scaffolding tailored to each learner.</li>
+            <li>Designed and authored a full curriculum for <strong>Statistics for Life</strong> (12 lecture modules) and tutored <strong>Calculus I &amp; II</strong> using MATLAB, JMP, and Jamovi.</li>
+            <li>Built a <strong>data-driven teaching dashboard</strong> with daily quizzes to flag conceptual lags &mdash; cutting drop-offs to ~2% &mdash; and led the JMP-to-Jamovi migration with video training to upskill fellow TAs.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-top">
+            <div class="tl-role">Student Ambassador &mdash; Mentoring &amp; Family Engagement</div>
+            <span class="tl-date">Jun 2024 &ndash; Dec 2025</span>
+          </div>
+          <div class="tl-org">Office of Student Research &amp; Innovation (OSRI), TAMU-CC</div>
+          <ul class="tl-list">
+            <li>Represented OSRI during campus tours and student events, <strong>mentoring prospective students and their families</strong> and answering questions with clarity and patience.</li>
+            <li>Strengthened the parent-and-student communication skills that effective secondary teaching depends on.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-top">
+            <div class="tl-role">Freelance STEM &amp; AP Tutor (Remote)</div>
+            <span class="tl-date">Dec 2020 &ndash; Dec 2023</span>
+          </div>
+          <div class="tl-org">U.S. Advanced Placement Curriculum &middot; Independent</div>
+          <ul class="tl-list">
+            <li>Delivered customized <strong>AP Mathematics and Physics</strong> instruction (e.g., AP Physics 1) to U.S. high school students.</li>
+            <li>Coached a core cohort to a <strong>100% top-score success rate &mdash; 8 of 8 students</strong> earned the highest possible scores.</li>
+            <li>Maintained a <strong>3.4 average GPA</strong> across the broader student base through long-term mentorship and progress tracking.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-top">
+            <div class="tl-role">Undergraduate Mathematics Tutor &amp; Teaching Assistant</div>
+            <span class="tl-date">Oct 2017 &ndash; Feb 2020</span>
+          </div>
+          <div class="tl-org">Pragathi Mahavidyalaya</div>
+          <ul class="tl-list">
+            <li>Tutored first-year students transitioning into college-level STEM coursework.</li>
+            <li>Taught <strong>Differential Equations, Calculus I &amp; II</strong>, and foundational computer science concepts.</li>
+            <li>Bridged the gap between theoretical mathematics and applied computing for incoming students.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-top">
+            <div class="tl-role">Subject-Matter Expert &mdash; Applied Mathematics &amp; Analytics</div>
+            <span class="tl-date">2021 &ndash; 2023</span>
+          </div>
+          <div class="tl-org">Tata Consultancy Services &amp; First American Title</div>
+          <ul class="tl-list">
+            <li>Served as a <strong>subject-matter expert</strong> applying statistics, quantitative reasoning, and data analysis to real enterprise problems.</li>
+            <li>Real-world context I bring into the classroom &mdash; showing students <strong>where the math actually goes</strong> after graduation.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACHIEVEMENTS / RESULTS ============ -->
+<section class="block alt" id="results">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Measurable Impact</span>
+      <h2>Achievements &amp; Recognition</h2>
+      <p>Real, verifiable outcomes from the classroom &mdash; the numbers behind the teaching.</p>
+    </div>
+    <div class="ach-grid reveal">
+      <div class="ach"><div class="anum">4.85/5</div><div class="alabel">Peak Course Rating</div><div class="adesc">Top section score across official TAMU-CC student evaluations; ~4.3/5 typical across cohorts.</div></div>
+      <div class="ach"><div class="anum">250+</div><div class="alabel">Students Taught &amp; Tutored</div><div class="adesc">Across 6+ years &mdash; AP high-schoolers through university statistics.</div></div>
+      <div class="ach"><div class="anum">100%</div><div class="alabel">AP Top-Score Rate</div><div class="adesc">All 8 students in a core AP cohort achieved the highest possible scores.</div></div>
+      <div class="ach"><div class="anum">37%</div><div class="alabel">Retention Improvement</div><div class="adesc">Data-informed instruction cut course drop-offs down to just 2%.</div></div>
+      <div class="ach"><div class="anum">6</div><div class="alabel">Course Sections Led</div><div class="adesc">Independent and co-instruction across the secondary-to-college bridge.</div></div>
+      <div class="ach"><div class="anum">12</div><div class="alabel">Lecture Modules Authored</div><div class="adesc">Full curriculum and a TA-training video library, built from scratch.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STUDENT VOICES / TESTIMONIALS ============ -->
+<section class="block" id="voices">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">In Their Words</span>
+      <h2>What Students Say</h2>
+      <p>Verbatim comments from official Texas A&amp;M University&ndash;Corpus Christi student course evaluations.</p>
+    </div>
+    <div class="quotes reveal">
+      <div class="quote">
+        <div class="qmark">&ldquo;</div>
+        <blockquote>He noticed when someone needed help while walking around and explained it in different ways for better understanding &mdash; patient to make sure the concepts were fully understood.</blockquote>
+        <div class="qby"><span class="qav">P</span><div><div class="qname">Pre-Calculus Student</div><div class="qrole">TAMU-CC &middot; Fall 2025</div></div></div>
+      </div>
+      <div class="quote">
+        <div class="qmark">&ldquo;</div>
+        <blockquote>Prof was very nice, respectful, and made us students feel comfortable and free to ask questions. Even helped us when we were behind and confused &mdash; so appreciated!</blockquote>
+        <div class="qby"><span class="qav">S</span><div><div class="qname">Statistics Student</div><div class="qrole">TAMU-CC &middot; Spring 2025</div></div></div>
+      </div>
+      <div class="quote">
+        <div class="qmark">&ldquo;</div>
+        <blockquote>Very kind to your students and knowledgeable about the material. Thank you for being patient during lab sessions &mdash; I was relieved whenever you could provide assistance.</blockquote>
+        <div class="qby"><span class="qav">S</span><div><div class="qname">Statistics Student</div><div class="qrole">TAMU-CC &middot; Spring 2025</div></div></div>
+      </div>
+      <div class="quote">
+        <div class="qmark">&ldquo;</div>
+        <blockquote>I really appreciated going over the reviews for tests and then going over the test problems afterwards for corrections.</blockquote>
+        <div class="qby"><span class="qav">P</span><div><div class="qname">Pre-Calculus Student</div><div class="qrole">TAMU-CC &middot; Fall 2025</div></div></div>
+      </div>
+      <div class="quote">
+        <div class="qmark">&ldquo;</div>
+        <blockquote>The lab was great &mdash; very patient with us, and very helpful whenever you asked a question. I learned more from the lab than I expected to.</blockquote>
+        <div class="qby"><span class="qav">S</span><div><div class="qname">Statistics Student</div><div class="qrole">TAMU-CC &middot; Spring 2025</div></div></div>
+      </div>
+      <div class="quote">
+        <div class="qmark">&ldquo;</div>
+        <blockquote>Made us students feel comfortable and free to ask questions, and helped us when we were behind and confused. Knowledgeable, respectful, and genuinely kind.</blockquote>
+        <div class="qby"><span class="qav">S</span><div><div class="qname">Statistics Student</div><div class="qrole">TAMU-CC &middot; Spring 2025</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INNOVATION ============ -->
+<section class="block alt" id="innovation">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Beyond the Whiteboard</span>
+      <h2>Innovation in the Classroom</h2>
+      <p>A modern, tech-forward educator who builds tools that make teaching measurably better.</p>
+    </div>
+    <div class="innov reveal">
+      <div class="icard">
+        <span class="ibadge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6"/><rect x="12" y="8" width="3" height="10"/><rect x="17" y="5" width="3" height="13"/></svg></span>
+        <h4>Educational Analytics Dashboard</h4>
+        <p>Daily comprehension quizzes feed a live dashboard that flags exactly which concepts a class is struggling with &mdash; so the next lesson lands where it's needed.</p>
+        <div class="imeta">37% retention gain</div>
+      </div>
+      <div class="icard">
+        <span class="ibadge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+        <h4>Ask-me-live Q&amp;A Platform</h4>
+        <p>Built a real-time AI classroom Q&amp;A tool at Islander Hack 2025 that lets students ask questions anonymously and get answers grounded in the day's lecture.</p>
+        <div class="imeta">Hackathon build &middot; 38 hrs</div>
+      </div>
+      <div class="icard">
+        <span class="ibadge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span>
+        <h4>Curriculum Modernization</h4>
+        <p>Led a department-wide migration to modern statistical software and authored a training video library so every TA could teach it confidently.</p>
+        <div class="imeta">12 modules authored</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESEARCH & SCHOLARSHIP ============ -->
+<section class="block" id="research">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Scholarship</span>
+      <h2>Research &amp; Publications</h2>
+      <p>I bring the rigor and curiosity of active research into every classroom &mdash; including work on the data science of education itself.</p>
+    </div>
+    <div class="research-featured reveal">
+      <div class="rcard flag">
+        <div class="rtype">M.S. Thesis &middot; 2026</div>
+        <div class="rtitle">Single-Image Super-Resolution of Satellite SAR Imagery</div>
+        <div class="rvenue">M.S. Data Science, Texas A&amp;M University &ndash; Corpus Christi</div>
+        <div class="rdesc">A comparative study benchmarking eight deep-learning super-resolution architectures across CNN, Vision Transformer, and Diffusion paradigms under a strict, fully reproducible evaluation protocol.</div>
+        <div class="rtags">
+          <span class="rtag">PyTorch</span>
+          <span class="rtag">Swin2SR &middot; 24.27 dB PSNR</span>
+          <span class="rtag">RCAN &middot; 0.927 SSIM</span>
+          <span class="rtag">PSNR / SSIM / LPIPS</span>
+        </div>
+      </div>
+      <div class="rcard flag">
+        <div class="rtype">Applied Statistics &middot; Education</div>
+        <div class="rtitle">Bayesian Inference for Student Performance Modeling</div>
+        <div class="rvenue">Bayesian Linear Regression &middot; MCMC (NUTS) &middot; brms / rstan</div>
+        <div class="rdesc">Modeled mathematics-exam performance across 1,000 student records to isolate the demographic and behavioral drivers of achievement, with full credible-interval uncertainty quantification.</div>
+        <div class="redu"><strong>Why it shapes my teaching:</strong> quantifying what genuinely moves student outcomes &mdash; test preparation alone added 5.5 points to math scores &mdash; is the same evidence-first instinct I bring to every lesson plan.</div>
+      </div>
+    </div>
+    <div class="rpub-list reveal">
+      <div class="rpub">
+        <div class="rp-num">01</div>
+        <div class="rp-body">
+          <div class="rp-title">Predictive Maintenance: Remaining Useful Life Estimation via a Hybrid CNN&ndash;LSTM</div>
+          <div class="rp-meta">Deep Learning &middot; PyTorch, FFT &amp; Wavelet signal processing &middot; NASA C-MAPSS</div>
+          <div class="rp-result">Reduced RMSE from <strong>~25 cycles to ~15 cycles</strong> versus an MLP baseline, sharply lowering false-negatives for urgent maintenance.</div>
+        </div>
+      </div>
+      <div class="rpub">
+        <div class="rp-num">02</div>
+        <div class="rp-body">
+          <div class="rp-title">Multivariate Statistical Analysis of Geomyoid Rodent Cranial Morphology</div>
+          <div class="rp-meta">Multivariate Statistics &middot; R &middot; Factor Analysis, MANOVA, LDA, MDS</div>
+          <div class="rp-result">First discriminant function captured <strong>83.3% of between-group variance</strong> across 181 specimens and 39 species.</div>
+        </div>
+      </div>
+      <div class="rpub">
+        <div class="rp-num">03</div>
+        <div class="rp-body">
+          <div class="rp-title">Walmart Revenue vs. FRED Retail Sales: A Time-Series Forecasting Study</div>
+          <div class="rp-meta">Econometrics &middot; Python, Statsmodels &middot; Expanding-window out-of-sample forecasting</div>
+          <div class="rp-result">Identified a post-COVID structural break and rigorously tested lagged models against a seasonal-naive baseline (<strong>Diebold&ndash;Mariano test</strong>).</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CREDENTIALS ============ -->
+<section class="block alt" id="credentials">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Qualifications</span>
+      <h2>Credentials &amp; Certification</h2>
+    </div>
+    <div class="creds reveal">
+      <div class="cred-block">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg> Education</h3>
+        <div class="cred-item">
+          <div class="ct">M.S. in Data Science</div>
+          <div class="cm">Texas A&amp;M University &ndash; Corpus Christi &middot; 2026</div>
+          <div class="cg">CGPA 3.8</div>
+        </div>
+        <div class="cred-item">
+          <div class="ct">B.Sc. in Mathematics, Computer Science &amp; Electronics</div>
+          <div class="cm">Osmania University, Hyderabad &middot; 2020</div>
+          <div class="cg">CGPA 3.3</div>
+        </div>
+      </div>
+      <div class="cred-block">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5L17 22l-5-3-5 3 1.5-8.5"/></svg> Certification &amp; Licensure</h3>
+        <ul class="cert-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Eligible &mdash; Texas Secondary Mathematics, Grades 7&ndash;12</strong> &middot; intern/probationary certificate available upon hire</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span><strong>TX PACT 735 &mdash; Passed</strong> &middot; TExES 235 scheduled May 2026</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>Full standard certification &mdash; Texas Teachers of Tomorrow (ACP) &middot; expected July 2027</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>AI for Educators &mdash; Microsoft &middot; expected Aug 2026</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>AWS Certified AI Practitioner &middot; Data Visualization with Power BI &amp; Tableau</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span>Canvas &amp; Blackboard LMS &mdash; course management, rubric design, analytics</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="comp-head reveal">
+      <span class="eyebrow">Competencies</span>
+      <h3>Classroom Practices &amp; Tools</h3>
+    </div>
+    <div class="competencies reveal">
+      <div class="comp-group">
+        <h4>Classroom Practice</h4>
+        <div class="comp-tags">
+          <span>Lesson Planning &amp; TEKS Alignment</span>
+          <span>Differentiated Instruction</span>
+          <span>Classroom Management</span>
+          <span>Data-Driven Instruction</span>
+          <span>Formative &amp; Summative Assessment</span>
+          <span>Student Engagement</span>
+        </div>
+      </div>
+      <div class="comp-group">
+        <h4>Collaboration</h4>
+        <div class="comp-tags">
+          <span>PLC &amp; Department Meetings</span>
+          <span>Coursework Creation &amp; Review</span>
+          <span>Peer Mentoring</span>
+          <span>Student, Faculty &amp; Family Communication</span>
+        </div>
+      </div>
+      <div class="comp-group">
+        <h4>Tools &amp; Technology</h4>
+        <div class="comp-tags">
+          <span>Canvas</span>
+          <span>Blackboard</span>
+          <span>TI-Graphing Calculators</span>
+          <span>JMP</span>
+          <span>Jamovi</span>
+          <span>MATLAB</span>
+          <span>Python / R / SQL</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap contact-inner">
+    <span class="eyebrow">Let's Talk</span>
+    <h2>Looking for a dedicated high school math teacher?</h2>
+    <p>I'd love to bring a data-informed, student-first approach to your mathematics department. Stop by, say hello, or reach out any time.</p>
+    <div class="contact-actions">
+      <a href="mailto:lokojivigneshwar@gmail.com?subject=Teaching%20Opportunity" class="btn btn-gold">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+        Email Me
+      </a>
+      <a href="tel:+13616961211" class="btn btn-outline">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call Me
+      </a>
+      <a href="Vigneshwar-Lokoji-Teaching-Resume.pdf" download class="btn btn-outline">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        Download R&eacute;sum&eacute;
+      </a>
+    </div>
+    <div class="contact-info">
+      <a href="mailto:lokojivigneshwar@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg> lokojivigneshwar@gmail.com</a>
+      <a href="tel:+13616961211"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +1 361-696-1211</a>
+      <a href="#" data-linkedin><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 17V10.3H6.13V17h2.21zM7.23 9.4a1.28 1.28 0 1 0 0-2.56 1.28 1.28 0 0 0 0 2.56zM18 17v-3.67c0-1.96-.42-3.47-2.71-3.47-1.1 0-1.84.6-2.14 1.18h-.03V10.3H10.9V17h2.21v-3.32c0-.88.17-1.73 1.26-1.73 1.07 0 1.09 1 1.09 1.79V17H18z"/></svg> LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">&copy; <span id="year"></span> <strong>Vigneshwar Lokoji</strong> &middot; High School Mathematics Teacher &middot; Corpus Christi, TX</div>
+</footer>
+
+<script>
+  // Mobile nav
+  var toggle = document.getElementById('navToggle');
+  var links = document.getElementById('navLinks');
+  toggle.addEventListener('click', function () { links.classList.toggle('open'); });
+  links.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () { links.classList.remove('open'); });
+  });
+
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Reveal on scroll
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('visible'); });
+  }
+
+  // LinkedIn link — set your profile URL here once and it updates everywhere.
+  var LINKEDIN_URL = ""; // e.g. "https://www.linkedin.com/in/vigneshwar-lokoji"
+  document.querySelectorAll('[data-linkedin]').forEach(function (a) {
+    if (LINKEDIN_URL) { a.href = LINKEDIN_URL; a.target = "_blank"; a.rel = "noopener"; }
+    else { a.style.display = "none"; } // hidden until a real profile URL is set
+  });
+</script>
+</body>
+</html>
