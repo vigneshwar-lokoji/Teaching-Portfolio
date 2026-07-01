@@ -319,6 +319,29 @@
   .comp-tags { display: flex; flex-wrap: wrap; gap: 8px; }
   .comp-tags span { font-size: .82rem; font-weight: 500; color: var(--slate); background: var(--bg); border: 1px solid var(--line); padding: 6px 12px; border-radius: 8px; }
 
+  /* ============ MODEL LESSON ============ */
+  .lesson-meta-bar { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 0 0 42px; }
+  .lmb-tag { font-size: .78rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; background: rgba(15,37,64,.06); color: var(--navy); border: 1px solid rgba(15,37,64,.14); }
+  .grl-wrap { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; align-items: center; gap: 0; margin: 0 0 52px; }
+  .grl-card { background: #fff; border: 1.5px solid var(--line); border-radius: 12px; padding: 28px 24px; }
+  .grl-badge { display: inline-block; font-size: .7rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 4px 12px; border-radius: 5px; margin: 0 0 14px; }
+  .grl-badge.ido { background: #f97316; color: #fff; }
+  .grl-badge.wedo { background: #7c3aed; color: #fff; }
+  .grl-badge.youdo { background: #16a34a; color: #fff; }
+  .grl-card h4 { font-family: var(--serif); font-size: 1.05rem; color: var(--navy); margin: 0 0 10px; }
+  .grl-card p { font-size: .9rem; color: var(--slate); margin: 0 0 20px; line-height: 1.6; }
+  .grl-foot { font-size: .78rem; font-weight: 600; letter-spacing: .03em; color: var(--gold); border-top: 1px solid var(--line); padding-top: 12px; }
+  .grl-arrow { font-size: 1.5rem; color: var(--slate); opacity: .35; padding: 0 16px; text-align: center; }
+  .lesson-docs-head { font-family: var(--serif); font-size: 1.15rem; color: var(--navy); margin: 0 0 20px; text-align: center; }
+  .lesson-docs { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .ldoc { display: flex; flex-direction: column; background: #fff; border: 1.5px solid var(--line); border-radius: 12px; padding: 24px; text-decoration: none; transition: border-color .2s, box-shadow .2s; }
+  .ldoc:hover { border-color: var(--gold); box-shadow: 0 4px 18px rgba(200,162,75,.14); }
+  .ldoc-type { font-size: .72rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--gold); margin: 0 0 8px; }
+  .ldoc-title { font-family: var(--serif); font-size: 1rem; font-weight: 700; color: var(--navy); margin: 0 0 10px; }
+  .ldoc-desc { font-size: .86rem; color: var(--slate); line-height: 1.55; flex: 1; margin: 0 0 20px; }
+  .ldoc-dl { font-size: .8rem; font-weight: 600; color: var(--navy); border: 1px solid var(--navy); border-radius: 6px; padding: 7px 14px; text-align: center; transition: all .18s; }
+  .ldoc:hover .ldoc-dl { background: var(--navy); color: #fff; }
+
   /* ============ CONTACT ============ */
   .contact { background: linear-gradient(160deg, var(--navy), var(--navy-deep)); color: #fff; padding: 80px 0; position: relative; overflow: hidden; }
   .contact::before { content: ""; position: absolute; top: -30%; left: -10%; width: 50%; height: 100%; background: radial-gradient(circle, rgba(200,162,75,.14), transparent 60%); }
@@ -348,6 +371,8 @@
     .hero-inner { grid-template-columns: 1fr; gap: 40px; }
     .hero-card { max-width: 420px; }
     .about-grid, .creds, .research-featured { grid-template-columns: 1fr; gap: 32px; }
+    .grl-wrap { grid-template-columns: 1fr; }
+    .grl-arrow { display: none; }
     .stats-inner { grid-template-columns: repeat(2, 1fr); }
     .stat:nth-child(2) { border-right: none; }
     .stat { border-bottom: 1px solid rgba(255,255,255,.1); }
@@ -393,6 +418,7 @@
       <a href="#experience">Experience</a>
       <a href="#results">Results</a>
       <a href="#voices">Voices</a>
+      <a href="#lesson">Lesson</a>
       <a href="#research">Research</a>
       <a href="#credentials">Credentials</a>
       <a href="#contact" class="cta">Connect</a>
@@ -707,6 +733,77 @@
         <p>Led a department-wide migration to modern statistical software and authored a training video library so every TA could teach it confidently.</p>
         <div class="imeta">12 modules authored</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MODEL LESSON ============ -->
+<section class="block" id="lesson">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Classroom in Action</span>
+      <h2>Model Lesson: Factoring Trinomials</h2>
+      <p>A complete, production-ready lesson package built for Waltrip High School &mdash; TEKS-aligned, fully scripted, and ready to deliver in any Algebra 1 classroom.</p>
+    </div>
+
+    <div class="lesson-meta-bar reveal">
+      <span class="lmb-tag">TEKS A.10E</span>
+      <span class="lmb-tag">Algebra 1</span>
+      <span class="lmb-tag">Waltrip High School &middot; HISD</span>
+      <span class="lmb-tag">X-Puzzle Method</span>
+      <span class="lmb-tag">Gradual Release Model</span>
+      <span class="lmb-tag">15&ndash;20 min core</span>
+    </div>
+
+    <div class="grl-wrap reveal">
+      <div class="grl-card">
+        <span class="grl-badge ido">I Do</span>
+        <h4>I model the thinking</h4>
+        <p>I narrate every decision aloud &mdash; students see how I decide, not just what I write on the board.</p>
+        <div class="grl-foot">Teacher does &middot; students watch</div>
+      </div>
+      <div class="grl-arrow">&rarr;</div>
+      <div class="grl-card">
+        <span class="grl-badge wedo">We Do</span>
+        <h4>We practice together</h4>
+        <p>Students try each step with a partner; I circulate, guide, and check for understanding.</p>
+        <div class="grl-foot">Shared responsibility</div>
+      </div>
+      <div class="grl-arrow">&rarr;</div>
+      <div class="grl-card">
+        <span class="grl-badge youdo">You Do</span>
+        <h4>You prove it solo</h4>
+        <p>Silent, timed, on the whiteboard. Every student commits an answer &mdash; no rescue.</p>
+        <div class="grl-foot">Students own it</div>
+      </div>
+    </div>
+
+    <p class="lesson-docs-head reveal">Complete Package</p>
+    <div class="lesson-docs reveal">
+      <a class="ldoc" href="lesson/Factoring_Trinomials_Model_Lesson.pdf" download>
+        <div class="ldoc-type">Slide Deck</div>
+        <div class="ldoc-title">Factoring Trinomials — Model Lesson</div>
+        <div class="ldoc-desc">13-slide classroom presentation using the X-Puzzle method. Includes FOIL warm-up, pattern discovery, I Do worked example, guided We Do practice, silent You Do, and exit ticket.</div>
+        <div class="ldoc-dl">Download PDF</div>
+      </a>
+      <a class="ldoc" href="lesson/Teacher_Script_and_Coaching_Guide.pdf" download>
+        <div class="ldoc-type">Teacher Script</div>
+        <div class="ldoc-title">Script &amp; Coaching Guide</div>
+        <div class="ldoc-desc">Word-for-word script with SAY / DO / CHECK / WATCH / SPOT annotations for all 13 slides. Includes timing table, LO/DOL, and panel-framing notes.</div>
+        <div class="ldoc-dl">Download PDF</div>
+      </a>
+      <a class="ldoc" href="lesson/Delivery_and_Facilitation_Playbook.pdf" download>
+        <div class="ldoc-type">Facilitation Guide</div>
+        <div class="ldoc-title">Delivery &amp; Facilitation Playbook</div>
+        <div class="ldoc-desc">Presence baseline, movement map aligned to each release phase, hand-gesture vocabulary, silent signals, and student-support choreography.</div>
+        <div class="ldoc-dl">Download PDF</div>
+      </a>
+      <a class="ldoc" href="lesson/Student_Response_Handout.pdf" download>
+        <div class="ldoc-type">Student Materials</div>
+        <div class="ldoc-title">Student Response Handout</div>
+        <div class="ldoc-desc">Structured practice handout aligned to the lesson flow — used during We Do and You Do phases. Includes X-Puzzle scaffolds and exit ticket.</div>
+        <div class="ldoc-dl">Download PDF</div>
+      </a>
     </div>
   </div>
 </section>
